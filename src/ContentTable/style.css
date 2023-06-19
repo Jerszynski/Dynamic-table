@@ -1,0 +1,36 @@
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table__row:nth-child(odd) {
+  background-color: hsl(0, 0%, 95%);
+}
+
+.table__cell {
+  border: 0;
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 10px;
+}
+
+.table__cell--justify {
+  text-align: justify;
+}
+
+.table__cell--height {
+  display: block;
+  height: 150px;
+  overflow: auto;
+}
+
+.table__row:hover {
+  background-color: hsl(0, 0%, 85%);
+}
+
+.table__cell--header {
+  font-weight: 700;
+  text-align: center;
+  background-color: #ddd;
+  background-color: hsl(0, 0%, 75%);
+}
