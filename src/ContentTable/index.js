@@ -17,67 +17,56 @@ const ContentTable = ({ books, handleRowClick }) => {
       </thead>
       <tbody>
         {books.length > 0 ? (
-          books
-            // .filter(
-            //   (book) =>
-            //     book.volumeInfo.authors && book.volumeInfo.authors.length > 0
-            // )
-            // .filter(
-            //   (book) =>
-            //     book.volumeInfo.description &&
-            //     book.volumeInfo.description.length > 0
-            // )
-            .map((book) => (
-              <tr
-                className="table__row table__row--height"
-                key={book.id}
-                onClick={() => handleRowClick(book.volumeInfo.authors[0])}
+          books.map((book) => (
+            <tr
+              className="table__row table__row--height"
+              key={book.id}
+              onClick={() => handleRowClick(book.volumeInfo.authors[0])}
+            >
+              <td
+                data-cell="Id"
+                className="table__cell table__cell--responsive"
               >
-                <td
-                  data-cell="Id"
-                  className="table__cell table__cell--responsive"
-                >
-                  {book.id}
-                </td>
-                <td
-                  data-cell="Title"
-                  className="table__cell table__cell--responsive"
-                >
-                  {book.volumeInfo.title}
-                </td>
-                <td
-                  data-cell="Author"
-                  className="table__cell table__cell--responsive"
-                >
-                  {book.volumeInfo.authors &&
-                    book.volumeInfo.authors.join(", ")}
-                </td>
-                <td
-                  data-cell="Published Date"
-                  className="table__cell table__cell--responsive"
-                >
-                  {book.volumeInfo.publishedDate}
-                </td>
-                <td
-                  data-cell="Page Count"
-                  className="table__cell table__cell--responsive"
-                >
-                  {book.volumeInfo.pageCount}
-                </td>
-                <td
-                  data-cell="Language"
-                  className="table__cell table__cell--lang table__cell--responsive"
-                >
-                  {book.volumeInfo.language}
-                </td>
-                <td
-                  data-cell="Description"
-                  className="table__cell table__cell--responsive table__cell--justify table__cell--height"
-                >
-                  {book.volumeInfo.description}
-                </td>
-              </tr>
-            ))
+                {book.id}
+              </td>
+              <td
+                data-cell="Title"
+                className="table__cell table__cell--responsive"
+              >
+                {book.volumeInfo.title}
+              </td>
+              <td
+                data-cell="Author"
+                className="table__cell table__cell--responsive"
+              >
+                {book.volumeInfo.authors && book.volumeInfo.authors.join(", ")}
+              </td>
+              <td
+                data-cell="Published Date"
+                className="table__cell table__cell--responsive"
+              >
+                {book.volumeInfo.publishedDate}
+              </td>
+              <td
+                data-cell="Page Count"
+                className="table__cell table__cell--responsive"
+              >
+                {book.volumeInfo.pageCount}
+              </td>
+              <td
+                data-cell="Language"
+                className="table__cell table__cell--lang table__cell--responsive"
+              >
+                {book.volumeInfo.language}
+              </td>
+              <td
+                data-cell="Description"
+                className="table__cell table__cell--responsive table__cell--justify table__cell--height"
+              >
+                {book.volumeInfo.description}
+              </td>
+            </tr>
+          ))
         ) : (
           <tr className="table__row">
             <td
