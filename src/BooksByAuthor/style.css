@@ -1,0 +1,21 @@
+.booksByAuthor {
+  margin-top: 20px;
+  border-top: 1px solid black;
+}
+
+.booksByAuthor__header {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 40px;
+}
+
+.listOfBooks {
+  list-style: decimal inside;
+  padding: 0 40px 20px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.listOfBooks__item {
+  font-size: 20px;
+}
