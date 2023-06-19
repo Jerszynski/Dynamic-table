@@ -1,5 +1,11 @@
 # Dynamic Table
 
+Demo:<br>
+
+#### https://jerszynski.github.io/dynamic-table/
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
