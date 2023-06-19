@@ -1,0 +1,11 @@
+.breadcrumb {
+  padding-bottom: 10px;
+  /* background-color: rgb(224, 224, 224); */
+}
+
+.breadcrumb__link {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 18px;
+  padding-left: 5px;
+}
